@@ -8,3 +8,4 @@ sqlalchemy
 werkzeug
 montreal-forced-aligner
 streamlit
+requests
