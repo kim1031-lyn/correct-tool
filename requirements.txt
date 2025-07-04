@@ -4,8 +4,6 @@ nltk
 cmudict
 ffmpeg-python
 openai-whisper
-difflib
-sqlite3
 sqlalchemy
 werkzeug
 montreal-forced-aligner
