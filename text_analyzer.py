@@ -12,10 +12,9 @@ def get_difficult_phones():
     return {'TH': ['θ', 'ð'], 'R': ['r'], 'L': ['l'], 'V': ['v'], 'NG': ['ŋ'], 'Z': ['z']}
 
 def analyze_text(text):
-    safe_nltk_download('tokenizers/punkt')
     safe_nltk_download('corpora/cmudict')
     d = cmudict.dict()
-    words = nltk.word_tokenize(text)
+    words = text.split()
     difficult_phones = get_difficult_phones()
     difficult_words = {}
     knowledge_points = {'现在进行时 (-ing)': [], '名词复数 (-s/-es)': []}
