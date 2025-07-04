@@ -1,6 +1,10 @@
-import streamlit as st
+import nltk
+nltk.download('punkt')
+nltk.download('cmudict')
+
 from text_analyzer import analyze_text
 from audio_corrector import correct_audio
+import streamlit as st
 
 st.title('AI英语朗读纠音助手')
 
