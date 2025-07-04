@@ -1,0 +1,4 @@
+body { background: #f8f9fa; }
+h1 { color: #2c3e50; }
+.card { box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+#text-analysis-result, #audio-correction-result { white-space: pre-wrap; }
