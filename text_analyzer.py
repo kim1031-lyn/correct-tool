@@ -2,12 +2,18 @@ import nltk
 from nltk.corpus import cmudict
 import re
 
+def safe_nltk_download(resource):
+    try:
+        nltk.data.find(resource)
+    except LookupError:
+        nltk.download(resource.split('/')[-1])
+
 def get_difficult_phones():
     return {'TH': ['θ', 'ð'], 'R': ['r'], 'L': ['l'], 'V': ['v'], 'NG': ['ŋ'], 'Z': ['z']}
 
 def analyze_text(text):
-    nltk.download('punkt', quiet=True)
-    nltk.download('cmudict', quiet=True)
+    safe_nltk_download('tokenizers/punkt')
+    safe_nltk_download('corpora/cmudict')
     d = cmudict.dict()
     words = nltk.word_tokenize(text)
     difficult_phones = get_difficult_phones()
